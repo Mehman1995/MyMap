@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Карта путешествий по России</string>
+    <string name="empty_list">Список точек маршрута пуст. Создайте свой маркер.</string>
+    <string name="add_point">Добавить маркер</string>
+    <string name="tab_map">Карта</string>
+    <string name="tab_marked_places">Помеченные места</string>
+    <string name="maximum_length">Максимум 27 символов</string>
+    <string name="menu_remove">Удалить</string>
+    <string name="menu_edit">Редактировать</string>
+    <string name="myLocation">Вы здесь</string>
+    <string name="error_empty_name">Поле с именем не может быть пустым</string>
+    <string name="error_empty_coordinates">Поле с координатамии не может быть пустым</string>
+    <string name="save">Сохарнить</string>
+    <string name="name">Краткое имя места</string>
+    <string name="description">Описание (по необходимости)</string>
+    <string name="locationСoordinates">Введите координаты или выберите на карте</string>
+    <string name="access_denied">Приложение не сможет отображать текущую локацию</string>
+
+</resources>

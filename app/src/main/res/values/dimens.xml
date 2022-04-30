@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="avatar_height">48dp</dimen>
+    <dimen name="avatar_width">48dp</dimen>
+    <dimen name="indent">20dp</dimen>
+    <dimen name="margin_top_divider">8dp</dimen>
+    <dimen name="margin_end_start_Field">16dp</dimen>
+</resources>

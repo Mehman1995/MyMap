@@ -1,0 +1,71 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt' //для работы с Room
+}
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        applicationId "ru.netology.travel_in_russia_maps"
+        minSdk 21
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        Properties properties = new Properties()
+        if (rootProject.file("maps.properties").exists()){
+            properties.load(rootProject.file("maps.properties").newDataInputStream())
+        }
+        manifestPlaceholders.mapsApiKey = properties.getProperty("MAPS_API_KEY", "")
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.4.0'
+    implementation 'com.google.android.material:material:1.6.0-alpha01' // для разделителя списка
+    implementation 'com.google.android.gms:play-services-maps:18.0.2'//для карт
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3' // для layout
+    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.2.0'// для layout
+    implementation "androidx.room:room-runtime:2.4.1" // для хранения Place
+    kapt "androidx.room:room-compiler:2.4.1" // для хранения Place
+    implementation "androidx.room:room-ktx:2.3.0" //для вызова методов room из корутин
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'// для листания списка
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.1" //для корутин, т.к. есть запросы из базы
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0" //для запуска корутин, чтобы не блокировало основной thread
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.0'// для хранения данных
+    implementation "androidx.navigation:navigation-fragment-ktx:2.3.5"// для подключения вьюМодели во фрагменте и навигации в нем
+
+    implementation "com.google.android.gms:play-services-location:19.0.1" // для использования карт, определение геолокации
+    implementation "com.google.android.gms:play-services-maps:18.0.2" // для использования карт
+    implementation "com.google.maps.android:maps-ktx:3.3.0" // для использования карт
+    implementation "com.google.maps.android:maps-utils-ktx:3.3.0" // для использования карт
+
+
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+}

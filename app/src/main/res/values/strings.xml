@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Travel in Russia_Maps</string>
+    <string name="title_activity_maps" translatable="false">MapsActivity</string>
+    <string name="empty_list">The list of route points is empty. Create your own marker.</string>
+    <string name="add_point">Add point</string>
+    <string name="tab_map">Map</string>
+    <string name="tab_marked_places">Marked places</string>
+    <string name="maximum_length">Maximum of 27 characters</string>
+    <string name="menu_remove">Remove</string>
+    <string name="menu_edit">Edit</string>
+    <string name="myLocation">You are here</string>
+    <string name="name">short name of the place</string>
+    <string name="description">place description (optional)</string>
+    <string name="locationСoordinates">enter the coordinates or select on the map</string>
+    <string name="save">Save</string>
+    <string name="error_empty_name">Name cannot be empty</string>
+    <string name="error_empty_coordinates">Coordinates cannot be empty</string>
+    <string name="access_denied">The app will not be able to display the current location</string>
+
+</resources>

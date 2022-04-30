@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/mapsFragment">
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="ru.netology.travel_in_russia_maps.ui.MapFragment"
+        android:label="MapsFragment" >
+        <action
+            android:id="@+id/action_mapsFragment_to_listOfPointsFragment"
+            app:destination="@id/listOfPointsFragment" />
+        <action
+            android:id="@+id/action_mapsFragment_to_newPlaceFragment"
+            app:destination="@id/newPlaceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listOfPointsFragment"
+        android:name="ru.netology.travel_in_russia_maps.ui.ListOfPlacesFragment"
+        android:label="ListOfPointsFragment" >
+        <action
+            android:id="@+id/action_listOfPointsFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+        <action
+            android:id="@+id/action_listOfPointsFragment_to_newPlaceFragment"
+            app:destination="@id/newPlaceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newPlaceFragment"
+        android:name="ru.netology.travel_in_russia_maps.ui.NewPlaceFragment"
+        android:label="fragment_new_place"
+        tools:layout="@layout/fragment_new_place" >
+        <action
+            android:id="@+id/action_newPlaceFragment_to_listOfPointsFragment"
+            app:destination="@id/listOfPointsFragment" />
+        <action
+            android:id="@+id/action_newPlaceFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/appActivity"
+        android:name="ru.netology.travel_in_russia_maps.ui.AppActivity"
+        android:label="AppActivity" />
+</navigation>
