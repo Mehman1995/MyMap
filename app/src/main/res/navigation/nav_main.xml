@@ -6,40 +6,40 @@
     app:startDestination="@id/mapsFragment">
     <fragment
         android:id="@+id/mapsFragment"
-        android:name="ru.netology.travel_in_russia_maps.ui.MapFragment"
-        android:label="MapsFragment" >
+        android:name="ru.maxpek.placesoftravel.activity.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" >
         <action
-            android:id="@+id/action_mapsFragment_to_listOfPointsFragment"
-            app:destination="@id/listOfPointsFragment" />
+            android:id="@+id/action_mapsFragment_to_listOfMarkersFragment"
+            app:destination="@id/listOfMarkersFragment" />
         <action
-            android:id="@+id/action_mapsFragment_to_newPlaceFragment"
-            app:destination="@id/newPlaceFragment" />
+            android:id="@+id/action_mapsFragment_to_newMarkerFragment"
+            app:destination="@id/newMarkerFragment" />
     </fragment>
     <fragment
-        android:id="@+id/listOfPointsFragment"
-        android:name="ru.netology.travel_in_russia_maps.ui.ListOfPlacesFragment"
-        android:label="ListOfPointsFragment" >
+        android:id="@+id/listOfMarkersFragment"
+        android:name="ru.maxpek.placesoftravel.activity.ListOfMarkersFragment"
+        android:label="fragment_list_of_markers"
+        tools:layout="@layout/fragment_list_of_markers" >
         <action
-            android:id="@+id/action_listOfPointsFragment_to_mapsFragment"
+            android:id="@+id/action_listOfMarkersFragment_to_mapsFragment"
             app:destination="@id/mapsFragment" />
         <action
-            android:id="@+id/action_listOfPointsFragment_to_newPlaceFragment"
-            app:destination="@id/newPlaceFragment" />
+            android:id="@+id/action_listOfMarkersFragment_to_editMarkerFragment"
+            app:destination="@id/editMarkerFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/newPlaceFragment"
-        android:name="ru.netology.travel_in_russia_maps.ui.NewPlaceFragment"
-        android:label="fragment_new_place"
-        tools:layout="@layout/fragment_new_place" >
+    <dialog
+        android:id="@+id/newMarkerFragment"
+        android:name="ru.maxpek.placesoftravel.activity.dialog.NewMarkerFragment"
+        android:label="fragment_new_marker"
+        tools:layout="@layout/fragment_new_marker" />
+    <dialog
+        android:id="@+id/editMarkerFragment"
+        android:name="ru.maxpek.placesoftravel.activity.dialog.EditMarkerFragment"
+        android:label="fragment_edit_marker"
+        tools:layout="@layout/fragment_edit_marker" >
         <action
-            android:id="@+id/action_newPlaceFragment_to_listOfPointsFragment"
-            app:destination="@id/listOfPointsFragment" />
-        <action
-            android:id="@+id/action_newPlaceFragment_to_mapsFragment"
-            app:destination="@id/mapsFragment" />
-    </fragment>
-    <activity
-        android:id="@+id/appActivity"
-        android:name="ru.netology.travel_in_russia_maps.ui.AppActivity"
-        android:label="AppActivity" />
+            android:id="@+id/action_editMarkerFragment_to_listOfMarkersFragment"
+            app:destination="@id/listOfMarkersFragment" />
+    </dialog>
 </navigation>

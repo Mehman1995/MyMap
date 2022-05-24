@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PlacesOfTravel</string>
+    <string name="add">Добавить</string>
+    <string name="addMarker">Добавить этот маркер?</string>
+    <string name="description_menu">меню</string>
+    <string name="menu_remove">Удалить</string>
+    <string name="menu_edit">Редактировать</string>
+    <string name="display_on_the_screen">Выести на экран</string>
+    <string name="show">Показать</string>
+    <string name="edit">Редактировать</string>
+    <string name="cancel">Отменить</string>
+</resources>

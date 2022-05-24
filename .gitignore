@@ -23,7 +23,6 @@ local.properties
 captures/
 .externalNativeBuild
 .cxx
-maps.properties
 
 ### NetBeans ###
 /nbproject/private/
@@ -46,4 +45,3 @@ maps.properties
 
 ### Gradle ###
 !/gradle/wrapper/gradle-wrapper.jar
-/app/google-services.json
